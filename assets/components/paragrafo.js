@@ -5,7 +5,6 @@ export class Paragrafo extends LitElement {
     css`
       :host {
         display: block;
-        width: 270px;
         color: var(--cor-secundaria, #665e57);
         font-family: var(--fonte-corpo);
         font-size: 1rem;

@@ -27,13 +27,14 @@ export class Botao extends LitElement {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        white-space: nowrap;
 
         transition: all 200ms;
         cursor: pointer;
       }
 
       button:hover, button-active {
-        background-color: var(--tom-2, #b38962);
+        background-color: var(--tom-2, #664e38);
       }
     `,
   ];
