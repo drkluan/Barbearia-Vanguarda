@@ -35,14 +35,9 @@ export class ABarbeariaSection extends LitElement {
       app-paragrafo {
         width: 270px;
 
-        color: var(--color-secundaria, #665e57);
         text-align: justify;
-        font-family: Var(--fonte-corpo);
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
         line-height: 140%; /* 1.4rem */
-        letter-spacing: -0.96px;
+        letter-spacing: -1.424px;
       }
 
       app-quadro {

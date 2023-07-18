@@ -13,5 +13,7 @@ export const section = css`
     gap: 4.375rem;
     
     padding: 2rem;
+    overflow: hidden;
+    position: relative;
   }
 `;
