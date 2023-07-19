@@ -5,6 +5,10 @@ export class ServicosSection extends LitElement {
   static styles = [
     section,
     css`
+      :host {
+        padding: 2rem 0;
+      }
+
       app-bolinhas {
         --cor-bolinhas: var(--tom-3);
 
@@ -63,37 +67,41 @@ export class ServicosSection extends LitElement {
         color: var(--tom-3, #664e38);
         font-weight: 700;
       }
-    
+
       .descricao {
         width: 108px;
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
 
-      img{
+      img {
         height: 120%;
-
       }
 
-      app-quadro{
+      app-quadro {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        width: 169px;
+        height: 320px;
       }
     `,
-
   ];
 
   render() {
     return html`
       <app-paragrafo class="titulo">
-        Estilo, cuidado e excelência em cada <span>corte</span></app-paragrafo>
+        Estilo, cuidado e excelência em cada <span>corte</span></app-paragrafo
+      >
 
       <section>
-        <app-quadro><img src="servicos-1.jpg" alt="Imagem servicos" /></app-quadro>
+        <app-quadro
+          ><img src="servicos-1.jpg" alt="Imagem servicos"
+        /></app-quadro>
 
         <aside>
           <article>
             <app-paragrafo>Corte</app-paragrafo>
-            <app-paragrafo class="descricao">Social, defradê, surfista, militar, razor part,
+            <app-paragrafo class="descricao"
+              >Social, defradê, surfista, militar, razor part,
               umdercut</app-paragrafo
             >
           </article>
