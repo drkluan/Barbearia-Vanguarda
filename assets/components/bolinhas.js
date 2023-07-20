@@ -32,6 +32,10 @@ export class Bolinhas extends LitElement {
         mask: url("bolinhas-Vazia.svg") no-repeat center;
       }
 
+      .fila-metade {
+        -webkit-mask: url("bolinhas-metade.svg") no-repeat center;
+        mask: url("bolinhas-metade.svg") no-repeat center;
+      }
 
       .bolinhas {
         width: 100%;
@@ -54,8 +58,8 @@ export class Bolinhas extends LitElement {
     if (this.formato === "fila-Vazia") {
       return "fila-Vazia";
     }
-    if (this.formato === "metade") {
-      return "metade";
+    if (this.formato === "fila-metade") {
+      return "fila-metade";
     }
     return "inteira";
   }
