@@ -106,7 +106,7 @@ export class ServicosSection extends LitElement {
             >
           </article>
 
-          <app-botao> Ver Mais</app-botao>
+          <app-botao> <a href="A-barbearia">Ver Mais</a> </app-botao>
         </aside>
       </section>
 

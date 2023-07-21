@@ -14,6 +14,7 @@ export class Mapa extends LitElement {
         flex-direction: column;
         align-items: center;
         flex-shrink: 0;
+        border-radius: 8px;
 
         color: #fff;
         font-family: var(--fonte-titulo);

@@ -8,6 +8,7 @@ export class UnidadesSection extends LitElement {
       :host {
         height: fit-content;
         gap: 32px;
+        padding-bottom: 4rem;
       }
 
       app-paragrafo {
