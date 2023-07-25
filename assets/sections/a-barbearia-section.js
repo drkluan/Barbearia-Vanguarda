@@ -72,6 +72,10 @@ export class ABarbeariaSection extends LitElement {
       img {
         width: 100%;
       }
+
+      app-botao {
+        display: var(--display-botao);
+      }
     `,
   ];
 
@@ -86,9 +90,9 @@ export class ABarbeariaSection extends LitElement {
           encontram para proporcionar cortes de cabelo e barbas impecáveis. Com
           uma equipe de barbeiros especializados, combinamos técnicas
           tradicionais com as últimas tendências, garantindo um atendimento
-          personalizado em um ambiente acolhedor.</app-paragrafo
-        >
-        <app-botao>Leia mais</app-botao>
+          personalizado em um ambiente acolhedor.</app-paragrafo>
+          
+        <app-botao><a href="A-barbearia">Ver Mais</a></app-botao>
       </article>
     `;
   }
