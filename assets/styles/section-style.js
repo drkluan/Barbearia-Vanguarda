@@ -11,9 +11,33 @@ export const section = css`
     justify-content: center;
     align-items: center;
     gap: 4.375rem;
-    
+
     padding: 2rem;
     overflow: hidden;
     position: relative;
+  }
+
+  button:hover,
+  button:active,
+  a:hover,
+  a:active {
+    background-color: color-mix( 
+      in srgb,
+      white 15%
+      var(--button-bacground, var(--tom-2)) 
+    );
+    color: var(--tom-1);
+  }
+
+  @media (min-whidt: 768px) {
+    :host {
+      padding: 3rem;
+    }
+  }
+
+  @media (min-whidt: 1024px) {
+    :host {
+      overflow: visible;
+    }
   }
 `;

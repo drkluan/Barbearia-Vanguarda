@@ -5,22 +5,30 @@ export class Quadro extends LitElement {
     css`
       :host {
         display: flex;
-        width: 20.875rem;
-        height: 16.25rem;
+        width: 93vw;
+        max-width: 768px;
+        height: auto;
         justify-content: center;
         align-items: center;
 
         border-radius: 8px;
+        background-color: #d9d9d9;
         box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.25);
 
+        aspect-ratio: 167 / 130;
         overflow: hidden; 
       }
+
+      @media (min-width: 1024px) {
+      :host {
+        aspect-ratio: 167 / 112;
+      }
+    }
     `,
   ];
 
   render() {
-    return html
-    `<slot> coloque um imagem ai locao </slot>`;
+    return html`<slot> coloque um imagem ai locao </slot>`;
   }
 }
 customElements.define("app-quadro", Quadro);

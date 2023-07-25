@@ -83,6 +83,36 @@ export class ServicosSection extends LitElement {
         width: 169px;
         height: 320px;
       }
+
+      @media (min-width: 768px){
+        section {
+          align-items: center;
+        }
+
+        app-quadro{
+          width: 265px;
+          height: 520px;
+          border-radius: 8px;
+        }
+
+        .titulo {
+          width: 330px;
+          font-size: 1.25rem;
+        }
+
+        article app-paragrafo:first-child {
+          font-size: 1.25rem
+        }
+
+        .descricao {
+          width: 158px;
+          font-size: 1rem;
+        }
+
+        aside {
+          padding: 176px 0px 16px 0px;
+        }
+      }
     `,
   ];
 
