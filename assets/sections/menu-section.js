@@ -12,7 +12,7 @@ export class MenuSection extends LitElement {
         display: flex;
         width: 100%;
         height: 100%;
-       max-width: 100%;
+        max-width: 100%;
         max-height: 100%;
         padding: 32px;
         border: 0;
@@ -35,7 +35,6 @@ export class MenuSection extends LitElement {
       dialog[open] {
         opacity: 1;
         pointer-events: auto;
-      
       }
 
       nav {
@@ -52,7 +51,8 @@ export class MenuSection extends LitElement {
         background-color: white;
       }
 
-      a {
+      a,
+      button {
         color: #fff;
         font-family: var(--fonte-titulo);
         font-size: 2rem;
@@ -65,6 +65,18 @@ export class MenuSection extends LitElement {
         justify-content: center;
         align-items: center;
         gap: 16px;
+
+        cursor: pointer;
+      }
+
+      a:hover,
+      button:hover {
+        color: var(--tom-1);
+      }
+
+      a:active,
+      button:active {
+        color: var(--tom-1);
       }
 
       button {
@@ -83,16 +95,24 @@ export class MenuSection extends LitElement {
     `,
   ];
 
+  rolarContato(){
+    return nav.rolarPara('#contato')
+}
+
+rolarUnidades(){
+    return nav.rolarPara('#Unidades')
+}
+
   render() {
     return html`
       <dialog>
         <app-logo></app-logo>
 
         <nav>
-          <a href="">Unidades<feather-icon icon="map-pin"></feather-icon></a>
-          <a href="">Contato<feather-icon icon="phone"></feather-icon></a>
-          <a href="">Serviços<feather-icon icon="scissors"></feather-icon></a>
-          <a href=""
+          <button @click=${this.rolarUnidades}>Unidades<feather-icon icon="map-pin"></feather-icon></button>
+          <button @click=${this.rolarContato}>Contato<feather-icon icon="phone"></feather-icon></button>
+          <a @click=${nav.fechar} href="">Serviços<feather-icon icon="scissors"></feather-icon></a>
+          <a @click=${nav.fechar} href="a-barbearia"
             >A Barbearia
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20">
@@ -101,7 +121,7 @@ export class MenuSection extends LitElement {
               />
             </svg>
           </a>
-          <a href="/">Home<feather-icon icon="home"></feather-icon></a>
+          <a @click=${nav.fechar} href="/">Home<feather-icon icon="home"></feather-icon></a>
 
           <button @click=${nav.fechar}>
             <feather-icon icon="x"></feather-icon>

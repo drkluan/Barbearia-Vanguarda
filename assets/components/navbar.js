@@ -19,12 +19,18 @@ export class Navbar extends LitElement {
                 z-index: 100;
                 mix-blend-mode: difference;
                 color: white;
-
+                
                 transition: top 1s;
+                pointer-events: none;
             }
 
             app-logo {
                 background-color: white
+            }
+
+            feather-icon {
+                cursor: pointer;
+                pointer-events: auto;
             }
 
             @media (min-width: 728px){

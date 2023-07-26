@@ -1,12 +1,12 @@
-import { initRouter } from "./assets/router";
 import "/assets";
+import { Router } from "@vaadin/router";
+import { initRouter } from "./assets/router";
 
 let navbar;
 let dialog;
 let router;
 
 document.addEventListener("DOMContentLoaded", function () {
-
   router = initRouter();
 
   navbar = document.querySelector("app-navbar");
@@ -21,6 +21,19 @@ export const nav = {
     dialog.showModal();
     navbar.classList.add("escondido");
   },
+  rolarPara: function (secao) {
+    Router.go("/");
+    router.ready.then(() => {
+      document
+        .querySelector("home-page")
+        .shadowRoot.querySelector(secao)
+        .scrollIntoView();
+
+
+        this.fechar()
+    });
+  },
+
   fechar: function () {
     dialog.close();
   },
@@ -33,7 +46,6 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     navbar.classList.remove("escondido");
-    
   } else {
     navbar.classList.add("escondido");
   }

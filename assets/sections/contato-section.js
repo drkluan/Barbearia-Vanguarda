@@ -25,6 +25,7 @@ export class ContatoSection extends LitElement {
         align-items: center;
         gap: 8px;
         align-self: stretch;
+        margin: 0 auto;
       }
 
       .whatsapp {

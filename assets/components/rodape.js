@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import { nav } from '../../main';
 
 export class Rodape extends LitElement {
     static styles = [
@@ -6,8 +7,6 @@ export class Rodape extends LitElement {
             :host {
                 display: block;
 
-                font-family: Var(--fonte-titulo);
-                font-size: .75rem;
                 color: white;
             }
 
@@ -18,8 +17,8 @@ export class Rodape extends LitElement {
                 width: 100%;
                 height: 2rem;
                 font-size: .5rem;
+                font-family: Var(--fonte-titulo);
                 background-color: color-mix(in srgb, black 40%, var(--tom-3))
-
             }
 
             footer {
@@ -45,9 +44,28 @@ export class Rodape extends LitElement {
                 
             }
 
-            a {
+            a, button {
+                font-size: .75rem;
+                font-family: Var(--fonte-titulo);
                 color: white;
                 text-decoration: none;
+                opacity: 0.9;
+
+                cursor: pointer;
+            }
+
+            a:hover, button:hover {
+                color: var(--tom-1)
+            }
+
+            a:active, button:active {
+                color: var(--tom-1)
+            }
+
+            button {
+                padding: 0;
+                border: 0;
+                background: transparent;
             }
 
             @media (min-width: 1024px){ 
@@ -59,15 +77,23 @@ export class Rodape extends LitElement {
         `
     ];
 
+    rolarContato(){
+        return nav.rolarPara('#contato')
+    }
+
+    rolarUnidades(){
+        return nav.rolarPara('#Unidades')
+    }
+
     render() {
         return html`
         <footer>
             <app-logo></app-logo>
             <nav>
-                <a href="">Unidades</a>
-                <a href="">Contato</a>
+                <button @click=${this.rolarUnidades}>Unidades</button>
+                <button @click=${this.rolarContato}>Contato</button>
                 <a href="">Serviços</a>
-                <a href="">A-Barbearia</a>
+                <a href="a-barbearia">A-Barbearia</a>
                 <a href="/">Home</a>
             </nav>
 
