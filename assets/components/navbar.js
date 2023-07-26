@@ -6,15 +6,16 @@ export class Navbar extends LitElement {
         css`
             :host {
                 width: 100%;
-                height: 96px;
                 box-sizing: border-box;
 
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0 2rem;
+                padding: 2rem;
 
                 position: fixed;
+                top: 0;
+                left: 0;
                 z-index: 100;
                 mix-blend-mode: difference;
                 color: white;
@@ -24,6 +25,14 @@ export class Navbar extends LitElement {
 
             app-logo {
                 background-color: white
+            }
+
+            @media (min-width: 728px){
+                app-logo{
+                width: 96px;
+                height: 96px;
+                }
+
             }
         `
     ];

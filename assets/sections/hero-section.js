@@ -38,14 +38,16 @@ export class HeroSection extends LitElement {
         height: 100%;
       }
       
-      @media (min-whidt: 1024px){
-        app-paragrafo {
-          display: none;
-        }
-
+      @media (min-width: 768px) {
         app-logo {
           width: 220px;
           height: 220px;
+        }
+      }
+      
+      @media (min-width: 1024px){
+        app-paragrafo {
+          display: none;
         }
       }
     `,

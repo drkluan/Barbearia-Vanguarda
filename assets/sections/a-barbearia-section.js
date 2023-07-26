@@ -66,7 +66,6 @@ export class ABarbeariaSection extends LitElement {
         z-index: -20;
 
         --cor-bolinhas: var(--tom-3);
-
       }
 
       img {
@@ -77,21 +76,21 @@ export class ABarbeariaSection extends LitElement {
         display: var(--display-botao);
       }
 
-      @media ( min-width: 768px) {
-          app-quadro {
-        width: 600px;
-        height: 600px;
+      @media (min-width: 768px) {
+        app-quadro {
+          width: 600px;
+          height: 600px;
 
-        right: -182px;
-        top: 200px;
+          right: -182px;
+          top: 200px;
         }
 
         app-bolinhas {
-        width: 400px;
-        height: 400px;
+          width: 400px;
+          height: 400px;
 
-        left: -20px;
-        top: 272px;
+          left: -20px;
+          top: 272px;
         }
 
         app-paragrafo {
@@ -103,17 +102,22 @@ export class ABarbeariaSection extends LitElement {
         }
       }
 
-      @media ( min-width: 768px) {
-          app-quadro {
-        top: 100px;
+      @media (min-width: 768px) {
+        app-quadro {
+          top: 100px;
         }
 
         app-bolinhas {
-        top: 112px;
+          top: 112px;
         }
 
         article {
           width: 70%;
+          border-image-source: linear-gradient(
+            20deg,
+            rgba(102, 78, 56, 0) 50%,
+            rgba(102, 78, 56, 1) 100%
+          );
         }
       }
     `,
@@ -123,15 +127,18 @@ export class ABarbeariaSection extends LitElement {
     return html`
       <app-titulo>A Barbearia</app-titulo>
       <app-bolinhas></app-bolinhas>
-      <app-quadro><img src="a-barbearia.jpg" alt="Imagem Barbearia" /></app-quadro>
+      <app-quadro
+        ><img src="a-barbearia.jpg" alt="Imagem Barbearia"
+      /></app-quadro>
       <article>
         <app-paragrafo
           >Bem-vindo à Barbearia Vanguarda, onde tradição e inovação se
           encontram para proporcionar cortes de cabelo e barbas impecáveis. Com
           uma equipe de barbeiros especializados, combinamos técnicas
           tradicionais com as últimas tendências, garantindo um atendimento
-          personalizado em um ambiente acolhedor.</app-paragrafo>
-          
+          personalizado em um ambiente acolhedor.</app-paragrafo
+        >
+
         <app-botao><a href="A-barbearia">Ver Mais</a></app-botao>
       </article>
     `;

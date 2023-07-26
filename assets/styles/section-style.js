@@ -29,13 +29,13 @@ export const section = css`
     color: var(--tom-1);
   }
 
-  @media (min-whidt: 768px) {
+  @media (min-width: 768px) {
     :host {
       padding: 3rem;
     }
   }
 
-  @media (min-whidt: 1024px) {
+  @media (min-width: 1024px) {
     :host {
       overflow: visible;
     }

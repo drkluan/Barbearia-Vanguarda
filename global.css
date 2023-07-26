@@ -1,27 +1,32 @@
 :root {
-    --cor-primaria: #E6B07E;
-    --cor-secundaria: #665E57;
-    --tom-1: #EAD8C7;
-    --tom-2: #B38962;
-    --tom-3: #664E38;
+  --cor-primaria: #e6b07e;
+  --cor-secundaria: #665e57;
+  --tom-1: #ead8c7;
+  --tom-2: #b38962;
+  --tom-3: #664e38;
 
-    --fonte-titulo: 'Exo', sans-serif;
-    --fonte-corpo: 'Source Serif 4', sans-serif;
+  --fonte-titulo: "Exo", sans-serif;
+  --fonte-corpo: "Source Serif 4", sans-serif;
 }
 
- body {
-    width: 100%;
-    
-    margin: 0 auto;
-    background-color: var(--tom-1);
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: var(--tom-1);
 }
 
 .escondido {
-    top: -96px;
+  top: -176px;
 }
 
-@media ( min-width: 768px) {
-    html {
-        font-size: 20px;
-    }
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
 }

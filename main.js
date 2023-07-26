@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 export const nav = {
   abrir: function () {
     dialog.showModal();
+    navbar.classList.add("escondido");
   },
   fechar: function () {
     dialog.close();
@@ -32,6 +33,7 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     navbar.classList.remove("escondido");
+    
   } else {
     navbar.classList.add("escondido");
   }
