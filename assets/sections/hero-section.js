@@ -31,10 +31,16 @@ export class HeroSection extends LitElement {
         position: absolute;
         right: -3.25rem;
         top: -1.375rem;
+        z-index: 10;
       }
 
       img {
         width: auto;
+        height: 100%;
+      }
+
+      swiper-container {
+        width: 100%;
         height: 100%;
       }
       
@@ -45,7 +51,7 @@ export class HeroSection extends LitElement {
         }
       }
       
-      @media (min-width: 1024px){
+      @media (min-widt: 1024px){
         app-paragrafo {
           display: none;
         }
@@ -61,7 +67,17 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img src="slide-1.png" alt="Imagem slider 1" />
+          <swiper-container loop="true" autoplay="true">
+          <swiper-slide>
+            <img src="slide-1.png" alt="Imagem slider 1" />
+            </swiper-slide>
+            <swiper-slide>
+            <img src="slider-2.jpg" alt="Imagem slider 2" />
+            </swiper-slide>
+            <swiper-slide>
+            <img src="slider-3.jpg" alt="Imagem slider 3" />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
       </section>
       <app-paragrafo>
