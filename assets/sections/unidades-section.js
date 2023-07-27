@@ -8,7 +8,7 @@ export class UnidadesSection extends LitElement {
       :host {
         height: fit-content;
         gap: 32px;
-        padding-bottom: 4rem;
+        padding: 0 0 4rem 0;
       }
 
       app-paragrafo {
@@ -28,6 +28,24 @@ export class UnidadesSection extends LitElement {
         left: -64px;
         top: -56px;
         z-index: -10;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 300px;
+       
+      }
+
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        transition: transform 500ms;
+      }
+
+      .swiper-slide-active { 
+        transform: scale(1.1)
+
       }
 
       @media (min-width: 728px){
@@ -54,7 +72,23 @@ export class UnidadesSection extends LitElement {
         Confira os horários específicos de cada unidade.
       </app-paragrafo>
 
-      <app-mapa></app-mapa>
+      <swiper-container space-between="-75">
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa><img src="mapa-2.jpg" alt="Imagem mapa 2" /></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+        <swiper-slide>
+          <app-mapa></app-mapa>
+        </swiper-slide>
+      </swiper-container>
 
       <app-bolinhas formato="fila-metade"></app-bolinhas>
     `;
