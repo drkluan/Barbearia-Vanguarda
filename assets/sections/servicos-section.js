@@ -84,15 +84,31 @@ export class ServicosSection extends LitElement {
         height: 320px;
       }
 
-      @media (min-width: 768px){
+      @media (min-width: 768px) {
         section {
           align-items: center;
         }
+      }
 
-        app-quadro{
+        app-quadro {
           width: 265px;
           height: 520px;
           border-radius: 8px;
+        }
+
+        swiper-container {
+          height: 100%;
+          width: 100%;
+        }
+
+        swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        img {
+          height: 100%;
         }
 
         .titulo {
@@ -101,7 +117,7 @@ export class ServicosSection extends LitElement {
         }
 
         article app-paragrafo:first-child {
-          font-size: 1.25rem
+          font-size: 1.25rem;
         }
 
         .descricao {
@@ -112,14 +128,13 @@ export class ServicosSection extends LitElement {
         aside {
           padding: 176px 0px 16px 0px;
         }
-      }
+     
 
-
-    @media (min-width: 1024px){
-      div {
-        display: none;
+      @media (min-width: 1024px) {
+        div {
+          display: none;
+        }
       }
-    }
     `,
   ];
 
@@ -130,9 +145,25 @@ export class ServicosSection extends LitElement {
       >
 
       <section>
-        <app-quadro
-          ><img src="servicos-1.jpg" alt="Imagem servicos"
-        /></app-quadro>
+        <app-quadro>
+          <swiper-container effect="fade"
+          
+          simulat-touch="false"
+          autoplay="true"
+          loop="true
+          disabled-on-interection="false""
+          speed="3000">
+            <swiper-slide>
+              <img src="servicos-1.jpg" alt="Imagem servicos1" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="servicos-2.jpg" alt="Imagem servicos2" />
+            </swiper-slide>
+            <swiper-slide>
+              <img src="servicos-3.jpg" alt="Imagem servicos3" />
+            </swiper-slide>
+          </swiper-container>
+        </app-quadro>
 
         <aside>
           <article>

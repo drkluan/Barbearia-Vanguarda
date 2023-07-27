@@ -43,15 +43,15 @@ export class HeroSection extends LitElement {
         width: 100%;
         height: 100%;
       }
-      
+
       @media (min-width: 768px) {
         app-logo {
           width: 220px;
           height: 220px;
         }
       }
-      
-      @media (min-widt: 1024px){
+
+      @media (min-widt: 1024px) {
         app-paragrafo {
           display: none;
         }
@@ -63,19 +63,32 @@ export class HeroSection extends LitElement {
     return html`
       <section>
         <app-titulo>
-          <h1>Barbearia<br><span>Vanguarda</span></h1>
+          <h1>Barbearia<br /><span>Vanguarda</span></h1>
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <swiper-container loop="true" autoplay="true">
-          <swiper-slide>
-            <img src="slide-1.png" alt="Imagem slider 1" />
+          <swiper-container
+            loop="true"
+            autoplay="true"
+            speed="5000"
+            disabled-on-interection="false"
+            effect="coverflow"
+            simulatetouch="false"
+            centered-slides="true"
+            coverflow-effect-rotate="50"
+            coverflow-effect-stretch="0"
+            coverflow-effect-depth="100"
+            coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="true"
+            >
+            <swiper-slide>
+              <img src="slide-1.png" alt="Imagem slider 1" />
             </swiper-slide>
             <swiper-slide>
-            <img src="slider-2.jpg" alt="Imagem slider 2" />
+              <img src="slider-2.jpg" alt="Imagem slider 2" />
             </swiper-slide>
             <swiper-slide>
-            <img src="slider-3.jpg" alt="Imagem slider 3" />
+              <img src="slider-3.jpg" alt="Imagem slider 3" />
             </swiper-slide>
           </swiper-container>
         </app-quadro>
