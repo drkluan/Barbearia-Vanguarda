@@ -73,7 +73,7 @@ export class Mapa extends LitElement {
   render() {
     return html`
       <figure>
-        <slot><img class="imagem" src="mapa-1.png" alt="mapa-1" /></slot>
+        <slot name="imagem"><img class="imagem" src="mapa-1.png" alt="mapa-1" /></slot>
       </figure>
 
       <address>

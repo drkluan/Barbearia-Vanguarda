@@ -31,8 +31,12 @@ export class UnidadesSection extends LitElement {
       }
 
       swiper-container {
-        width: 100%;
+        width: 100svw;
         height: 300px;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%)
        
       }
 
@@ -59,10 +63,41 @@ export class UnidadesSection extends LitElement {
           width: 400px;
           height: 300px;
         }
+
+        swiper-container {
+          height: 400px;
+        }
       }
     `,
   ];
 
+  firstUpdated() {
+    const swiper = this.renderRoot.querySelector('swiper-container')
+
+    console.log(swiper)
+
+    // space-between="-75" initial-slide "1" rewind="true"
+    Object.assign(swiper, {
+      spaceBetween: -75,
+      initialSlide: 1,
+      rewind: true,
+      breakpoints: {
+        768: {
+          spaceBetween: -275
+        },
+        1024: {
+          spaceBetween: -575
+        },
+        1368: {
+          spaceBetween: 300,
+          slidesPerView: 3,
+          centeredSlides: true,
+        },
+      }
+    })
+
+    swiper.initialize()
+  }
   render() {
     return html`
       <app-paragrafo>
@@ -72,21 +107,18 @@ export class UnidadesSection extends LitElement {
         Confira os horários específicos de cada unidade.
       </app-paragrafo>
 
-      <swiper-container space-between="-75">
+      <swiper-container init="false">
         <swiper-slide>
           <app-mapa></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa><img src="mapa-2.jpg" alt="Imagem mapa 2" /></app-mapa>
+          <app-mapa><img slot="imagem" loading="lazy" src="mapa-2.jpg" alt="Imagem mapa 2" /></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa><img slot="imagem" loading="lazy" src="mapa-3.jpg" alt="Imagem mapa 3" /></app-mapa>
         </swiper-slide>
         <swiper-slide>
-          <app-mapa></app-mapa>
-        </swiper-slide>
-        <swiper-slide>
-          <app-mapa></app-mapa>
+          <app-mapa><img slot="imagem" loading="lazy" src="mapa-4.jpg" alt="Imagem mapa 4" /></app-mapa>
         </swiper-slide>
       </swiper-container>
 
