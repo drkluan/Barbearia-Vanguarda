@@ -74,8 +74,6 @@ export class UnidadesSection extends LitElement {
   firstUpdated() {
     const swiper = this.renderRoot.querySelector('swiper-container')
 
-    console.log(swiper)
-
     // space-between="-75" initial-slide "1" rewind="true"
     Object.assign(swiper, {
       spaceBetween: -75,

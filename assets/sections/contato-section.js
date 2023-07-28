@@ -10,7 +10,7 @@ export class ContatoSection extends LitElement {
         gap: 0;
       }
 
-      img {
+      video {
         height: 100%;
       }
 
@@ -67,19 +67,18 @@ export class ContatoSection extends LitElement {
     const numeroWhatsapp = "5511945101107";
     return html`
         <app-titulo>Entre em contato conosco</app-titulo>
-        <app-quadro><img src="thumb.png" alt="Imagem thumb" /></app-quadro>
+        <app-quadro>
+          <video data-src="video-contato.webm" poster="thumb-contato.webp" autoplay mutd loop></video>
+        </app-quadro>
         <div> 
           
             <app-botao>
-
               <a href="mailto:contato@barbeariavanguarda.com.br">
-                <feather-icon icon="mail"></feather-icon>Nos envie um email
+              <feather-icon icon="mail"></feather-icon>Nos envie um email
               </a>
-            
             </app-botao>    
             
             <app-botao class="whatsapp">
-            
             <a href=${`https://wa.me/${numeroWhatsapp}?text=${this.mensagemWhatsapp()}`}>
               <svg 
               xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor">

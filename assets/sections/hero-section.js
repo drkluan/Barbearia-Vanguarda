@@ -85,10 +85,10 @@ export class HeroSection extends LitElement {
               <img src="slide-1.png" alt="Imagem slider 1" />
             </swiper-slide>
             <swiper-slide>
-              <img src="slider-2.jpg" alt="Imagem slider 2" />
+              <img loading="lazy" src="slider-2.jpg" alt="Imagem slider 2" />
             </swiper-slide>
             <swiper-slide>
-              <img src="slider-3.jpg" alt="Imagem slider 3" />
+              <img loading="lazy" src="slider-3.jpg" alt="Imagem slider 3" />
             </swiper-slide>
           </swiper-container>
         </app-quadro>
