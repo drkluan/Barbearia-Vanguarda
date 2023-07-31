@@ -1,8 +1,10 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/section-style";
 
 export class ContatoSection extends LitElement {
   static styles = [
+    animate,
     section,
     css`
       :host {
@@ -26,6 +28,10 @@ export class ContatoSection extends LitElement {
         gap: 8px;
         align-self: stretch;
         margin: 0 auto;
+      }
+
+      app-quadro {
+        z-index: 10;
       }
 
       .whatsapp {
@@ -66,11 +72,12 @@ export class ContatoSection extends LitElement {
   render() {
     const numeroWhatsapp = "5511945101107";
     return html`
-        <app-titulo>Entre em contato conosco</app-titulo>
+        <app-titulo class="animate__animated " 
+      data-toggle-class="animate__fadeInUp">Entre em contato conosco</app-titulo>
         <app-quadro>
           <video data-src="video-contato.webm" poster="thumb-contato.webp" autoplay mutd loop></video>
         </app-quadro>
-        <div> 
+        <div class="animate__animated" data-toggle-class="animate__fadeIn"> 
           
             <app-botao>
               <a href="mailto:contato@barbeariavanguarda.com.br">
