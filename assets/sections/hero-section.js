@@ -123,7 +123,7 @@ export class HeroSection extends LitElement {
           </swiper-container>
         </app-quadro>
       </section>
-      <app-paragrafo class="animate__animated animete__delay-5s"
+      <app-paragrafo class="animate__animated animate__delay-5s"
               data-toggle-class="animate__fadeIn">
         Obtenha um estilo empecavel,do cabelo a barba.
       </app-paragrafo>
